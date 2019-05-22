@@ -120,8 +120,8 @@ def fastfindNNPre(x, m):
     return X, n, sumx2, sumx, meanx, sigmax2, sigmax
 
 
-def fastfindNN(X, y, n, m, sumx2, sumx, meanx, sigmax2, sigmax):
-    global TSC_SUBSEQ_get_ZNORM = None
+def fastfindNN(X, y, n, m, sumx2, sumx, meanx, sigmax2, sigmax, TSC_SUBSEQ_get_ZNORM=None):
+    # global TSC_SUBSEQ_get_ZNORM = None
     dropval = y[0]
     y = y[::-1]
     y[m + 1:2 * n] = 0
